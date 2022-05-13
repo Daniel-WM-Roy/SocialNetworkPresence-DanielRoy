@@ -41,9 +41,5 @@ object Main extends ZIOAppDefault {
     } yield ()
   }
 
-  import com.danielroy.socialnetworkpressure.client.SocialMediaClient._
-
-  override def run: ZIO[Any with ZIOAppArgs with Scope, Any, Any] =
-    app
-      .provide(testSocialMediaClientLayer)
+  override def run: ZIO[Any with ZIOAppArgs with Scope, Any, Any] = ???
 }

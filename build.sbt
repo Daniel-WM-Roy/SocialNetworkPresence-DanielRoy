@@ -11,6 +11,9 @@ lazy val root = (project in file("."))
     name := "SocialNetworkPresence",
     libraryDependencies ++= Seq(
       "dev.zio" %% "zio" % ZIOVersion,
-      "dev.zio" %% "zio-json" % ZIOJSONVersion
-    )
+      "dev.zio" %% "zio-json" % ZIOJSONVersion,
+      "dev.zio"                %% "zio-test"            % ZIOVersion,
+      "dev.zio"                %% "zio-test-sbt"        % ZIOVersion
+    ),
+    testFrameworks := Seq(new TestFramework("zio.test.sbt.ZTestFramework")),
   )
